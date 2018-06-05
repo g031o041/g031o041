@@ -12,7 +12,7 @@ function fizzbuzz($number)
 <html>
 <body>
 <ol>
-<?php for($i = 1; $i < 100; $i++):
+<?php for($i = 1; $i < 101; $i++):
   echo '<li>'.fizzbuzz($i).'</li>';
 endfor; ?>
 </ol>
