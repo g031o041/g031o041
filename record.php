@@ -2,6 +2,7 @@
 try {
     $dbh = new PDO('mysql:host=localhost;dbname=g031o041', 'g031o041','TAGHRUK18QknZc9Y');
     
+    if($_POST != null){
     $stmt = $dbh -> prepare("INSERT INTO users (user_name, password, created, modified) VALUES (:user_name, :password, :created, :modified)");
     $stmt->bindParam(':user_name', $user_name, PDO::PARAM_STR);
     $stmt->bindParam(':password', $password, PDO::PARAM_STR);
@@ -14,6 +15,10 @@ try {
     $modified = $created;
 
     $stmt->execute();
+?>
+<p>レコードの挿入に成功しました</p>
+<?php
+    }
 ?>
 <table>
   <tr>
