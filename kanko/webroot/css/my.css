@@ -1,0 +1,38 @@
+/* DESIGN */
+/*html {
+  font-size: 1.1em;
+  font-size: calc(1em + 1vw);
+}
+*/
+body{
+  height: 100vh;
+  margin: 0;
+}
+
+#list-container {
+  overflow-y: scroll;
+}
+
+#map {
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+/* LAYOUT */
+body {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr;
+}
+
+aside {
+  grid-row: 1;
+  grid-column: 2 / 3; 
+}
+
+#list-container {
+  grid-row: 1;
+  grid-column: 1 / 2;
+}
